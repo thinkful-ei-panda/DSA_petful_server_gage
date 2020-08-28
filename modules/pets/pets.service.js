@@ -29,8 +29,10 @@ module.exports = {
      
   },
   dequeue(type) {
+    // console.log('PRE CALL ############',pets.cats.all());
     let pet = pets[type].dequeue();
+    // console.log('POST CALL ############',pets.cats.all());
+    pets[type] = pets[type];
     return pet;
-    // Remove a pet from the queue.
   }
 };

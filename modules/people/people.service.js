@@ -18,7 +18,7 @@ module.exports = {
 
   enqueue(person) {
     people.enqueue(person);
-
+    console.log(people.all());
     return;
     // Add a person to the queue.
   },

@@ -10,10 +10,13 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', json, (req, res) => {
+
   const {person} = req.body;
-  People.enqueue(person)
-    .then(res.status(201));
+  People.enqueue(person);
+  res.status(201).send(`${person} has been entered in queue`).end();
   // Add a new person to the queue.
 });
+
+
 
 module.exports = router;
