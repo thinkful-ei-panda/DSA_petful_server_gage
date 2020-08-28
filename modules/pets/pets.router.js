@@ -7,11 +7,10 @@ const People = require('../people/people.service');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  Pets.get()
-    .then(catDog =>{
-      res.json(catDog);
-    });
-  // Return all pets currently up for adoption.
+  const petPack = Pets.get();
+
+  res.json(petPack);
+
 });
 
 router.delete('/', json, (req, res) => {

@@ -46,13 +46,15 @@ class Queue {
     // Return all items in the queue.
     if (this.first === null) return 'nothing in queue';
     else{
-      res =[];
+      let res =[];
       let node = this.first; 
-      while(node.next !== null){
-        res.push(node.value)
+      while(node !== null){
+        res.push(node.value);
+        node = node.next;
+      }
+      return res;
     }
-    return res;
   }
 }
 
- module.exports = Queue;
+module.exports = Queue;

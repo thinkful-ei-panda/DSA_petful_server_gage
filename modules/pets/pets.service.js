@@ -21,7 +21,13 @@ module.exports = {
     return {cat,dog};
     // Return the pets next in line to be adopted.
   },
-
+  showAll(){
+    const catList = pets.cats.all();
+    const dogList = pets.dogs.all();
+    const pack = {catList, dogList};
+    return pack ; 
+     
+  },
   dequeue(type) {
     let pet = pets[type].dequeue();
     return pet;
