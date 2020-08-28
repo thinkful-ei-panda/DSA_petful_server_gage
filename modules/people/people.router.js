@@ -19,7 +19,7 @@ router.post('/', json, (req, res) => {
 
 router.delete('/',json, (req,res) =>{
   let person = People.dequeue();
-  res.status(204).send(person).end();
+  res.send({person : person}).status(204).end();
 })
 
 
