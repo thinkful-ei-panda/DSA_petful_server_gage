@@ -44,7 +44,14 @@ class Queue {
 
   all() {
     // Return all items in the queue.
-  
+    if (this.first === null) return 'nothing in queue';
+    else{
+      res =[];
+      let node = this.first; 
+      while(node.next !== null){
+        res.push(node.value)
+    }
+    return res;
   }
 }
 
