@@ -34,13 +34,17 @@ class Queue {
     }
     return node.value;
   }
-  
+
   show() {
     // Return the next item in the queue.
+    if (this.first === null)return 'sorry seems like no one is in line';
+    else
+      return this.first.value;
   }
 
   all() {
     // Return all items in the queue.
+  
   }
 }
 
