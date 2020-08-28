@@ -13,7 +13,7 @@ router.post('/', json, (req, res) => {
 
   const {person} = req.body;
   People.enqueue(person);
-  res.status(201).send(`${person} has been entered in queue`).end();
+  res.status(201).end();
   // Add a new person to the queue.
 });
 
