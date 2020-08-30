@@ -18,9 +18,8 @@ router.delete('/', json, (req, res) => {
   
   const adaptedPet = Pets.dequeue(type);
   if(!adaptedPet){
-    res.status(400).send({error : 'sorry no more pets up for adaption'})
+    res.status(400).send({error : 'sorry no more pets up for adaption'});
   }
-
   res.status(204).end();
   // Remove a pet from adoption.
 });
