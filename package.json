@@ -3,6 +3,10 @@
   "scripts": {
     "dev": "nodemon server.js"
   },
+  "keywords": [],
+  "engines": {
+    "node": "14.2.0"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

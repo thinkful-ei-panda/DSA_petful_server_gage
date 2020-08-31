@@ -15,8 +15,15 @@ store.dogs.forEach(dog => pets.dogs.enqueue(dog));
 
 // --------------------
 
+
 module.exports = {
   get() {
+    if(pets.cats.first === null){
+      store.cats.forEach(cat => pets.cats.enqueue(cat));
+    }
+    if(pets.dogs.first === null){
+      store.dogs.forEach(cat => pets.dogs.enqueue(cat));
+    }
     const cat = pets.cats.show();
     const dog = pets.dogs.show();
     return {cat,dog};
